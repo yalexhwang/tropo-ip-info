@@ -12,7 +12,7 @@ We use a few services from a company called Tropo. Part of our integration with 
 Helpfully, Tropo publishes their IP addresses (in CIDR block notation) in a format that is readily accessible programmatically. What you need to do is write a simple script to retrieve and output the current IP addresses.
 
 ## (Part of) The solution
-1. Find the documentation on how to retrieve Tropo's current IP information. Your favorite search engine should be able to help..
+1. Search for documentation on how to retrieve Tropo's current IP information for whitelisting purposes.
 2. You should now have a command to run that will query and display Tropo's IP information. Write a Python script that retrieves this information and prints to STDOUT just the CIDR blocks, one per line, in a simple CSV format. Prefix each line with the word ```tropo``` - for example:
 ```python
 tropo,10.10.0.10/24
@@ -22,8 +22,10 @@ This format is important as this script would be part of a larger toolchain, inc
 ## Notes
 * There are pretty much no restrictions/guidelines as to how you implement this - it's up to you
 * Use a virtualenv. Always!
-* Google is often your friend.
 * If you find a useful third-party package, use it!
 * Code style is just as important as functionality - maintainability costs are the silent killer! There are some tools to help you write properly presentable python (namely pep8 and pyflakes - worth checking out)
 
 We're interested in seeing how you *approach* solving a problem like this as much as how you actually *implement* it.
+
+## Questions?
+Submit it as an [issue](https://github.com/HireIQ/tropo-ip-info/issues) to this repo! Odds are someone else will have a similar question, so sharing questions and answers that way seems like a good idea.
