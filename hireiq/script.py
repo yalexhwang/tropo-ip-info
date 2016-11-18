@@ -1,5 +1,5 @@
 import sys
-import subprocess 
+import subprocess
 import csv
 import re
 
@@ -12,7 +12,7 @@ def extract_addresses(data):
     addresses = re.findall(pattern, data)
     # Print all matching IP addresses if availalbe
     if addresses:
-        writer = csv.writer(sys.stdout, delimiter=' ', 
+        writer = csv.writer(sys.stdout, delimiter=' ',
                             quoting=csv.QUOTE_NONE)
         for item in addresses:
             writer.writerow(['tropo,' + item])
@@ -31,4 +31,3 @@ except subprocess.CalledProcessError as e:
     return_code = e.returncode
     print 'CalledProcessError output: \n' + output
     print 'CalledProcessError return_code: \n' + return_code
-
